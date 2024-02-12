@@ -1,0 +1,24 @@
+:root {
+  --background-rosa: #fcf3f3;
+}
+
+body {
+  /* background-color: rgb(62, 59, 74); */
+  /* background-color: var(--background-rosa); */
+  margin: 0;
+  background-image: radial-gradient(circle at 10px 10px, var(--rosa-claro) 0.1%, transparent 5%),
+  radial-gradient(circle at 10px 10px, var(--azul-claro) 0.1%, transparent 5%);
+  background-size: 30px 30px;
+}
+
+.cookie-regular {
+  font-family: "Cookie", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.euphoria-script-regular {
+  font-family: "Euphoria Script", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
