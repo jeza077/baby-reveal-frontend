@@ -346,3 +346,14 @@ button {
 button:hover {
   background-color: #607a9fb0;
 }
+
+footer {
+  font-size: 0.8rem;
+  text-align: center;
+  padding: 0px 20px;
+  color: rgb(163 153 153);
+}
+
+footer a {
+  color: rgb(119, 117, 117);
+}

@@ -296,7 +296,9 @@ function App() {
       </section>
 
 
-
+      <footer>
+        <p>Desarrollado por Jesús Zuniga <br/> Contacto: <a href="mailto:jesus.zuniga077@gmail.com?subject=Consulta%20sobre%20tu%20sitio%20web&body=Hola,%20me%20gustaría%20hacer%20una%20consulta%20sobre%un%20sitio%20web.">Envíame un correo electrónico</a></p>
+      </footer>
     </>
   );
 }
