@@ -139,7 +139,7 @@ function App() {
           <div className="text-container">
             <Fade
               className="reveal-text euphoria-script-regular text-boy"
-              delay={8e3}
+              delay={5e3}
               cascade
               damping={3e-1}
               triggerOnce={true}
@@ -148,7 +148,7 @@ function App() {
             </Fade>
             <Fade
               className="reveal-text euphoria-script-regular"
-              delay={9e3}
+              delay={6e3}
               cascade
               damping={3e-1}
               triggerOnce={true}
@@ -157,7 +157,7 @@ function App() {
             </Fade>
             <Fade
               className="reveal-text euphoria-script-regular text-girl"
-              delay={10e3}
+              delay={7e3}
               cascade
               damping={3e-1}
               triggerOnce={true}
