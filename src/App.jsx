@@ -209,10 +209,10 @@ function App() {
           direction={"up"}
           delay={8e3}
           duration={10000}
-          className={conejoAzulImg}
+          className="image-conejo-azul"
           triggerOnce={true}
         >
-          <img src="./assets/image/conejo-azul.png" alt="" />
+          <img src={conejoAzulImg} alt="" />
         </Fade>
 
         <div className="bubbles-container" ref={bubblesContainerRef}>
