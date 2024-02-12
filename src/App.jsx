@@ -89,37 +89,59 @@ function App() {
   }, []);
 
   const handleConfirmation = () => {
-    updateStatus(selectedPerson.id, 1); // Envía el estado 1 para confirmar asistencia
-  };
-
-  const handleDecline = () => {
-    updateStatus(selectedPerson.id, 2); // Envía el estado 2 para indicar que no asistirá
-  };
-
-  const updateStatus = (id, status) => {
-    console.log({id, status})
-    // return;
-    fetch(`https://baby-reveal.onrender.com/api/people/${id}/status`, {
-    // fetch(`http://localhost:5000/api/people/${id}/status`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ status }),
-    })
+    updateStatus(selectedPerson.id, 1) // Envía el estado 1 para confirmar asistencia
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
+        if (response.success) {
+          // Si la confirmación es exitosa, muestra la notificación de agradecimiento
+          alert("¡Gracias por confirmar tu asistencia!");
+        } else {
+          // Maneja el caso en el que la confirmación no sea exitosa
+          alert("Hubo un problema al confirmar la asistencia. Por favor, intenta de nuevo.");
         }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data.message); // Muestra el mensaje de respuesta de la API
-        // Aquí puedes agregar lógica adicional si lo deseas, como actualizar el estado local de las personas
       })
       .catch((error) => {
-        console.error("There was a problem with your fetch operation:", error);
+        console.error("Error updating status:", error);
+        alert("Hubo un error al confirmar la asistencia. Por favor, intenta de nuevo más tarde.");
       });
+  };
+  
+  const handleDecline = () => {
+    updateStatus(selectedPerson.id, 2) // Envía el estado 2 para indicar que no asistirá
+      .then((response) => {
+        if (response.success) {
+          // Si la declinación es exitosa, muestra un mensaje
+          alert("Lamentamos que no puedas asistir. ¡Esperamos verte en otra ocasión!");
+        } else {
+          // Maneja el caso en el que la declinación no sea exitosa
+          alert("Hubo un problema al declinar la asistencia. Por favor, intenta de nuevo.");
+        }
+      })
+      .catch((error) => {
+        console.error("Error updating status:", error);
+        alert("Hubo un error al declinar la asistencia. Por favor, intenta de nuevo más tarde.");
+      });
+  };
+  
+  const updateStatus = async (id, status) => {
+    try {
+      const response = await fetch(`https://baby-reveal.onrender.com/api/people/${id}/status`, {
+        // fetch(`http://localhost:5000/api/people/${id}/status`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ status }),
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      console.log(data.message); // Muestra el mensaje de respuesta de la API
+      return { success: true };
+    } catch (error) {
+      console.error("There was a problem with your fetch operation:", error);
+      return { success: false };
+    }
   };
   
 
