@@ -74,7 +74,7 @@ function App() {
   const [selectedPerson, setSelectedPerson] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/people")
+    fetch("https://baby-reveal.onrender.com/api/people")
       .then((response) => response.json())
       .then((data) => setPeople(data))
       .catch((error) => console.error("Error fetching people:", error));
@@ -91,7 +91,7 @@ function App() {
   const updateStatus = (id, status) => {
     console.log({id, status})
     // return;
-    fetch(`http://localhost:5000/api/people/${id}/status`, {
+    fetch(`https://baby-reveal.onrender.com/api/people/${id}/status`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
