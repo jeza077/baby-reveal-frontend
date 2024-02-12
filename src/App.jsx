@@ -1,6 +1,13 @@
 
 import { Fade } from "react-awesome-reveal";
 
+import nubesImg from './assets/image/nubes.png';
+import conejoUnoImg from './assets/image/conejo-uno.png';
+import conejoAzulImg from './assets/image/conejo-azul.png';
+import clothesImg from './assets/image/clothes.png';
+import panalImg from './assets/image/panal.png';
+import toallitasImg from './assets/image/toallitas.png';
+
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
 
@@ -134,7 +141,7 @@ function App() {
           className="image-nubes"
           triggerOnce={true}
         >
-          <img src="../src/assets/image/nubes.png" alt="" />
+          <img src={nubesImg} alt="" />
         </Fade>
 
         <div className={`background-image ${isLoaded ? "loaded" : ""}`}>
@@ -195,17 +202,17 @@ function App() {
           className="image-conejo"
           triggerOnce={true}
         >
-          <img src="../src/assets/image/conejo-uno.png" alt="" />
+          <img src={conejoUnoImg} alt="" />
         </Fade>
 
         <Fade
           direction={"up"}
           delay={8e3}
           duration={10000}
-          className="image-conejo-azul"
+          className={conejoAzulImg}
           triggerOnce={true}
         >
-          <img src="../src/assets/image/conejo-azul.png" alt="" />
+          <img src="./assets/image/conejo-azul.png" alt="" />
         </Fade>
 
         <div className="bubbles-container" ref={bubblesContainerRef}>
@@ -229,14 +236,14 @@ function App() {
       </section>
 
       <section className="clothes">
-        <img src="../src/assets/image/clothes.png" alt="baby-clothes" />
+        <img src={clothesImg} alt="baby-clothes" />
         <p>Viste de azul si piensas que será un encantador príncipe, o de rosa si presientes que una hermosa princesita se une a nuestra familia.</p>
       </section>
 
       <section className="gift">
         <div className="imgs">
-          <img src="../src/assets/image/panal.png" alt="panal-baby" />
-          <img src="../src/assets/image/toallitas.png" alt="toallitas-baby" />
+          <img src={panalImg} alt="panal-baby" />
+          <img src={toallitasImg} alt="toallitas-baby" />
         </div>
         <p>Si crees que el bebé será un niño, ¡te pedimos que traigas pañales! y Si crees que será una niña, ¡que sean toallitas húmedas y llena su armario de dulzura!</p>  
       </section>
