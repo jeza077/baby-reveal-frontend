@@ -75,6 +75,7 @@ function App() {
 
   useEffect(() => {
     fetch("https://baby-reveal.onrender.com/api/people")
+    // fetch("http://localhost:5000/api/people")
       .then((response) => response.json())
       .then((data) => setPeople(data))
       .catch((error) => console.error("Error fetching people:", error));
@@ -92,6 +93,7 @@ function App() {
     console.log({id, status})
     // return;
     fetch(`https://baby-reveal.onrender.com/api/people/${id}/status`, {
+    // fetch(`http://localhost:5000/api/people/${id}/status`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -132,7 +134,7 @@ function App() {
           className="image-nubes"
           triggerOnce={true}
         >
-          <img src="../src/assets/imgs/nubes.png" alt="" />
+          <img src="./assets/nubes.png" alt="" />
         </Fade>
 
         <div className={`background-image ${isLoaded ? "loaded" : ""}`}>
@@ -193,7 +195,7 @@ function App() {
           className="image-conejo"
           triggerOnce={true}
         >
-          <img src="../src/assets/imgs/conejo-uno.png" alt="" />
+          <img src="./assets/conejo-uno.png" alt="" />
         </Fade>
 
         <Fade
@@ -203,7 +205,7 @@ function App() {
           className="image-conejo-azul"
           triggerOnce={true}
         >
-          <img src="../src/assets/imgs/conejo-azul.png" alt="" />
+          <img src="./assets/conejo-azul.png" alt="" />
         </Fade>
 
         <div className="bubbles-container" ref={bubblesContainerRef}>
@@ -227,14 +229,14 @@ function App() {
       </section>
 
       <section className="clothes">
-        <img src="../src/assets/imgs/clothes.png" alt="baby-clothes" />
+        <img src="./assets/clothes.png" alt="baby-clothes" />
         <p>Viste de azul si piensas que será un encantador príncipe, o de rosa si presientes que una hermosa princesita se une a nuestra familia.</p>
       </section>
 
       <section className="gift">
         <div className="imgs">
-          <img src="../src/assets/imgs/panal.png" alt="panal-baby" />
-          <img src="../src/assets/imgs/toallitas.png" alt="toallitas-baby" />
+          <img src="./assets/panal.png" alt="panal-baby" />
+          <img src="./assets/toallitas.png" alt="toallitas-baby" />
         </div>
         <p>Si crees que el bebé será un niño, ¡te pedimos que traigas pañales! y Si crees que será una niña, ¡que sean toallitas húmedas y llena su armario de dulzura!</p>  
       </section>
