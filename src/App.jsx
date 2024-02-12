@@ -134,7 +134,7 @@ function App() {
           className="image-nubes"
           triggerOnce={true}
         >
-          <img src="./assets/image/nubes.png" alt="" />
+          <img src="../src/assets/image/nubes.png" alt="" />
         </Fade>
 
         <div className={`background-image ${isLoaded ? "loaded" : ""}`}>
@@ -195,7 +195,7 @@ function App() {
           className="image-conejo"
           triggerOnce={true}
         >
-          <img src="./assets/image/conejo-uno.png" alt="" />
+          <img src="../src/assets/image/conejo-uno.png" alt="" />
         </Fade>
 
         <Fade
@@ -205,7 +205,7 @@ function App() {
           className="image-conejo-azul"
           triggerOnce={true}
         >
-          <img src="./assets/image/conejo-azul.png" alt="" />
+          <img src="../src/assets/image/conejo-azul.png" alt="" />
         </Fade>
 
         <div className="bubbles-container" ref={bubblesContainerRef}>
@@ -229,14 +229,14 @@ function App() {
       </section>
 
       <section className="clothes">
-        <img src="./assets/image/clothes.png" alt="baby-clothes" />
+        <img src="../src/assets/image/clothes.png" alt="baby-clothes" />
         <p>Viste de azul si piensas que será un encantador príncipe, o de rosa si presientes que una hermosa princesita se une a nuestra familia.</p>
       </section>
 
       <section className="gift">
         <div className="imgs">
-          <img src="./assets/image/panal.png" alt="panal-baby" />
-          <img src="./assets/image/toallitas.png" alt="toallitas-baby" />
+          <img src="../src/assets/image/panal.png" alt="panal-baby" />
+          <img src="../src/assets/image/toallitas.png" alt="toallitas-baby" />
         </div>
         <p>Si crees que el bebé será un niño, ¡te pedimos que traigas pañales! y Si crees que será una niña, ¡que sean toallitas húmedas y llena su armario de dulzura!</p>  
       </section>
